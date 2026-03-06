@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CityBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="user-header">
+
+    <svg viewBox="0 0 500 72" width="320" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="44" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">
+        <tspan fill="#e8f0fb">City</tspan><tspan fill="#4baee8">Bridge</tspan>
+      </text>
+      <line x1="0" y1="52" x2="220" y2="52" stroke="#4baee8" stroke-width="1.6" opacity="0.4" />
+      <text x="0" y="67" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" fill="#7dcef8" letter-spacing="4" opacity="0.82">CONNECTING COMMUNITIES</text>
+    </svg>
+
+    <nav class="user-nav">
+      <a class="nav-tab active" href="user.html">Profile</a>
+      <a class="nav-tab" href="my-permits.html">My Permits</a>
+      <a class="nav-tab" href="request-permit.html">Request a Permit</a>
+      <a class="nav-tab" href="safety-guidelines.html">Safety Guidelines</a>
+      <a class="nav-tab" href="authorities.html">View Authorities</a>
+      <a class="logout-btn" href="Home.html">Log Out</a>
+    </nav>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="dashboard-main">
+
+    <div class="page-header">
+      <div>
+        <h1>My Dashboard</h1>
+        <p>Your company profile and permit activity at a glance.</p>
+      </div>
+    </div>
+
+    <!-- Profile panels -->
+    <div class="profile-grid">
+
+      <div class="panel">
+        <div class="panel-title">Company Information</div>
+        <div class="detail-row">
+          <span class="detail-label">Company Name</span>
+          <span class="detail-value">Al-Rashidi Construction Co.</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Industry / Sector</span>
+          <span class="detail-value">Construction</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Account Representative</div>
+        <div class="detail-row">
+          <span class="detail-label">First Name</span>
+          <span class="detail-value">Ahmad</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Last Name</span>
+          <span class="detail-value">Al-Otaibi</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Phone Number</span>
+          <span class="detail-value">+966 50 123 4567</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Email</span>
+          <span class="detail-value">ahmad@alrashidi.sa</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Username</span>
+          <span class="detail-value">ahmad_otaibi</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-label">Total Permits</div>
+        <div class="stat-value">6</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pending</div>
+        <div class="stat-value pending">2</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Approved</div>
+        <div class="stat-value approved">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Rejected</div>
+        <div class="stat-value rejected">1</div>
+      </div>
+    </div>
+
+    <!-- Recent permits -->
+    <div class="panel">
+      <div class="panel-title">
+        Recent Permits
+        <a href="my-permits.html">View All</a>
+      </div>
+      <table class="permits-table">
+        <thead>
+          <tr>
+            <th>Permit ID</th>
+            <th>Type</th>
+            <th>Submitted</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#CB-0041</td>
+            <td>Labor Entry</td>
+            <td>Mar 5, 2026</td>
+            <td><span class="badge badge-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td>#CB-0038</td>
+            <td>Construction Equipment</td>
+            <td>Feb 28, 2026</td>
+            <td><span class="badge badge-approved">Approved</span></td>
+          </tr>
+          <tr>
+            <td>#CB-0035</td>
+            <td>Medical Device</td>
+            <td>Feb 20, 2026</td>
+            <td><span class="badge badge-rejected">Rejected</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 CityBridge. Smart cities, seamless access.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/citybridge" class="social" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-.8a1 1 0 100 2 1 1 0 000-2z"/>
+        </svg>
+      </a>
+      <a href="https://twitter.com/citybridge" class="social" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
+        </svg>
+      </a>
+      <a href="mailto:citybridge@email.com" class="social" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
+        </svg>
+      </a>
+      <a href="tel:+966500000000" class="social" aria-label="Phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.5.8 3.9.8a1 1 0 011 1V20a1 1 0 01-1 1C12.4 21 3 11.6 3 1a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.7.8 3.9.1.4 0 .8-.2 1.1l-2.2 2.2z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
