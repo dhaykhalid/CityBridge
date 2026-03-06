@@ -5,109 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - CityBridge</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
 
-  <!-- ── HEADER ── -->
   <header>
     <svg viewBox="0 0 500 72" width="320" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="44"
-            font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif"
-            font-size="42" font-weight="700" letter-spacing="-1">
+      <text x="0" y="44" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">
         <tspan fill="#e8f0fb">City</tspan><tspan fill="#4baee8">Bridge</tspan>
       </text>
       <line x1="0" y1="52" x2="220" y2="52" stroke="#4baee8" stroke-width="1.6" opacity="0.4" />
-      <text x="0" y="67"
-            font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif"
-            font-size="10.5" font-weight="300" fill="#7dcef8"
-            letter-spacing="4" opacity="0.82">
-        CONNECTING COMMUNITIES
-      </text>
+      <text x="0" y="67" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" fill="#7dcef8" letter-spacing="4" opacity="0.82">CONNECTING COMMUNITIES</text>
     </svg>
   </header>
 
-  <!-- ── BREADCRUMB ── -->
   <nav class="breadcrumb">
-    <div class="breadcrumb-container">
-      <span class="breadcrumb-item">
-        <a href="Home.html">Home</a>
-      </span>
-      <span class="breadcrumb-separator">›</span>
-      <span class="breadcrumb-item active">Login</span>
-    </div>
+    <a href="Home.html">Home</a>
+    <span class="sep">›</span>
+    <span class="current">Login</span>
   </nav>
 
-  <!-- ── MAIN ── -->
   <main>
-    <div class="form-container">
+    <div class="form-card">
       <h2>Welcome Back</h2>
       <p class="subtitle">Log in to your CityBridge account</p>
 
-      <form id="loginForm" action="user.html" method="post">
+      <form action="user.html" method="post">
 
-        <div class="form-group">
+        <div class="field">
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" placeholder="name@example.com" required />
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="password">Password</label>
           <input type="password" id="password" name="password" placeholder="Enter your password" required />
         </div>
 
         <div class="login-buttons">
-          <button type="submit" class="btn btn-primary btn-full" formaction="user.html">
-            Login as User
-          </button>
-
-          <div class="divider">
-            <span>or</span>
-          </div>
-
-          <button type="submit" class="btn btn-admin btn-full" formaction="admin.html">
-            Login as Admin
-          </button>
+          <button type="submit" class="btn btn-primary btn-full" formaction="user.html">Login as User</button>
+          <div class="divider"><span>or</span></div>
+          <button type="submit" class="btn btn-admin btn-full" formaction="admin.html">Login as Admin</button>
         </div>
 
       </form>
 
       <div class="form-footer">
-        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        Don't have an account? <a href="signup.html">Sign Up</a>
       </div>
     </div>
   </main>
 
-  <!-- ── FOOTER ── -->
   <footer>
     <p>&copy; 2026 CityBridge. Smart cities, seamless access.</p>
-
     <div class="social-links">
-
-      <a href="https://instagram.com/citybridge" class="social" aria-label="Instagram">
+      <a href="https://instagram.com/citybridge" aria-label="Instagram">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-.8a1 1 0 100 2 1 1 0 000-2z"/>
         </svg>
       </a>
-
-      <a href="https://twitter.com/citybridge" class="social" aria-label="X">
+      <a href="https://twitter.com/citybridge" aria-label="X">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
         </svg>
       </a>
-
-      <a href="mailto:citybridge@email.com" class="social" aria-label="Email">
+      <a href="mailto:citybridge@email.com" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
         </svg>
       </a>
-
-      <a href="tel:+966500000000" class="social" aria-label="Phone">
+      <a href="tel:+966500000000" aria-label="Phone">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.5.8 3.9.8a1 1 0 011 1V20a1 1 0 01-1 1C12.4 21 3 11.6 3 1a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.7.8 3.9.1.4 0 .8-.2 1.1l-2.2 2.2z"/>
         </svg>
       </a>
-
     </div>
   </footer>
 
