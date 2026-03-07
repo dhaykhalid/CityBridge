@@ -1,4 +1,4 @@
-<img width="2869" height="475" alt="image" src="https://github.com/user-attachments/assets/bf3afd47-d9d7-4e4b-a70d-ec429580b473" />
+
 
 # CityBridge
 
