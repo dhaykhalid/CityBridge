@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CityBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="user-header">
+    <svg viewBox="0 0 500 72" width="320" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="44" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">
+        <tspan fill="#e8f0fb">City</tspan><tspan fill="#4baee8">Bridge</tspan>
+      </text>
+      <line x1="0" y1="52" x2="220" y2="52" stroke="#4baee8" stroke-width="1.6" opacity="0.4" />
+      <text x="0" y="67" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" fill="#7dcef8" letter-spacing="4" opacity="0.82">CONNECTING COMMUNITIES</text>
+    </svg>
+    <nav>
+      <a href="user.html" >Profile</a>
+      <a href="my-permits.html">My Permits</a>
+      <a href="reqprimt.html">Request a Permit</a>
+      <a href="safety-guidelines.html" class="active">Safety Guidelines</a>
+      <a href="authorities.html">View Authorities</a>
+      <a href="Home.html" class="logout">Log Out</a>
+    </nav>
+  </header>
+
+
+<main>
+
+  <div class="guidelines-hero">
+    <h1>Safety Guidelines &amp; Requirements</h1>
+    <p>Review all rules before submitting your application. Rules are divided into general rules that apply to all permits, and specific rules per permit type.</p>
+  </div>
+
+  <div class="permit-tabs">
+    <button class="permit-tab active" onclick="show('general', this)">All Permits</button>
+    <button class="permit-tab" onclick="show('labor', this)">👷 Labor</button>
+    <button class="permit-tab" onclick="show('construction', this)">🏗️ Construction Equipment</button>
+    <button class="permit-tab" onclick="show('medical', this)">🏥 Medical Device</button>
+    <button class="permit-tab" onclick="show('electronic', this)">💻 Electronic Device</button>
+  </div>
+
+  <div class="guidelines-body">
+
+    <!-- GENERAL -->
+    <div id="panel-general" class="permit-panel active">
+      <p class="section-label">General Rules — Apply to All Permit Types</p>
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width:120px">Category</th>
+            <th style="width:110px">Level</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Applicant must be 18 years of age or older.</td>
+          </tr>
+          <tr>
+            <td>Identity</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>A valid national ID or passport must be submitted and must not be expired.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>All submitted documents must be in English or accompanied by an official certified translation.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Applicant must have no pending legal violations or outstanding fines within the Smart City jurisdiction.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Falsifying any information in the application will result in a permanent ban and referral for legal action.</td>
+          </tr>
+          <tr>
+            <td>Validity</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Renewal must be initiated before the permit expiry date. Operating with an expired permit is a violation.</td>
+          </tr>
+          <tr>
+            <td>Processing</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Processing times vary by permit type. Incomplete applications will not be processed.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- LABOR -->
+    <div id="panel-labor" class="permit-panel">
+      <p class="section-label">Labor Permit — Specific Rules</p>
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width:120px">Category</th>
+            <th style="width:110px">Level</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Applicant must be 21 years of age or older at the time of application.</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Workers under 18 years of age are strictly prohibited from being listed on this permit.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Proof of employment or a labor contract signed by both parties.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Medical fitness certificate issued within the last 3 months.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Employer must be a registered legal entity within the Smart City jurisdiction.</td>
+          </tr>
+          <tr>
+            <td>Validity</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Permit is valid for 12 months. Renewal must be initiated at least 30 days before expiry.</td>
+          </tr>
+          <tr>
+            <td>Processing</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Standard processing time is 5–7 business days after a complete submission.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONSTRUCTION -->
+    <div id="panel-construction" class="permit-panel">
+      <p class="section-label">Construction Equipment Permit — Specific Rules</p>
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width:120px">Category</th>
+            <th style="width:110px">Level</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Primary operator must be at least 21 years old and hold a valid certified operator license.</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Any secondary authorized user listed on the permit must be 18 years of age or older.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Equipment registration certificate and valid insurance documents.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Site authorization letter issued by the project owner or site supervisor.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Safety inspection report dated within the last 6 months is mandatory.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Third-party liability insurance must be active before permit issuance.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Unauthorized equipment operation on-site will result in immediate confiscation and permit revocation.</td>
+          </tr>
+          <tr>
+            <td>Validity</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Permit is valid for the project duration, maximum 24 months. Extensions require full re-application.</td>
+          </tr>
+          <tr>
+            <td>Processing</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Standard processing time is 7–10 business days after submission.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MEDICAL -->
+    <div id="panel-medical" class="permit-panel">
+      <p class="section-label">Medical Device Permit — Specific Rules</p>
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width:120px">Category</th>
+            <th style="width:110px">Level</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Applicant must be 21 years of age or older and hold a valid medical professional license.</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Minors are not permitted to operate or be listed as device custodians under any circumstance.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Valid medical license and current professional registration certificate.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Device manufacturer compliance and certification documents (FDA, CE, or SFDA approval).</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Facility license for the premises where the device will be stored and operated.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Import clearance certificate is required if the device is sourced internationally.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Device must carry approval from the National Medical Devices Authority prior to any use.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Any adverse event or device malfunction must be reported within 72 hours of occurrence.</td>
+          </tr>
+          <tr>
+            <td>Validity</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Permit is valid for 24 months. An annual compliance audit is required to maintain active standing.</td>
+          </tr>
+          <tr>
+            <td>Processing</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Processing time is 10–14 business days due to mandatory regulatory review.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ELECTRONIC -->
+    <div id="panel-electronic" class="permit-panel">
+      <p class="section-label">Electronic Device Permit — Specific Rules</p>
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th style="width:120px">Category</th>
+            <th style="width:110px">Level</th>
+            <th>Rule</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Applicant must be 18 years of age or older for personal use permits.</td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Commercial deployment applicants must be 21+ and hold a valid business license.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Device technical specification sheet including frequency band and power output documentation.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Type approval certificate issued by the Communications Regulatory Authority.</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Cybersecurity compliance declaration is required for all IoT or network-connected devices.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Device must operate within approved frequency ranges and must not cause interference to other systems.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge required">Required</span></td>
+            <td>Any device collecting personal or location data must comply with the Smart City Data Privacy Act.</td>
+          </tr>
+          <tr>
+            <td>Legal</td>
+            <td><span class="rule-badge important">Important</span></td>
+            <td>Devices used for surveillance require a separate Security Permit before deployment.</td>
+          </tr>
+          <tr>
+            <td>Validity</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Permit is valid for 12 months. Any hardware or firmware modification immediately voids the permit.</td>
+          </tr>
+          <tr>
+            <td>Processing</td>
+            <td><span class="rule-badge info">Info</span></td>
+            <td>Standard processing time is 3–5 business days after a complete submission.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+
+  <footer>
+    <p>&copy; 2026 CityBridge. Smart cities, seamless access.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/citybridge" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm6-.8a1 1 0 100 2 1 1 0 000-2z"/>
+        </svg>
+      </a>
+      <a href="https://twitter.com/citybridge" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
+        </svg>
+      </a>
+      <a href="mailto:citybridge@email.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
+        </svg>
+      </a>
+      <a href="tel:+966500000000" aria-label="Phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.5.8 3.9.8a1 1 0 011 1V20a1 1 0 01-1 1C12.4 21 3 11.6 3 1a1 1 0 011-1h3.2a1 1 0 011 1c0 1.4.3 2.7.8 3.9.1.4 0 .8-.2 1.1l-2.2 2.2z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+<script>
+  function show(key, btn) {
+    document.querySelectorAll('.permit-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.permit-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + key).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

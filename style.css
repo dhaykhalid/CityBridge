@@ -623,3 +623,107 @@ footer p {
   color: #4baee8;
 }
 
+.hidden {
+  display: none;
+}
+.guidelines-hero {
+  padding: 48px 48px 36px;
+  border-bottom: 1px solid rgba(74, 174, 232, 0.12);
+}
+
+.guidelines-hero h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #e8f0fb;
+  margin-bottom: 6px;
+}
+
+.guidelines-hero p {
+  font-size: 0.83rem;
+  color: #7a9ec7;
+  line-height: 1.7;
+}
+
+.permit-tabs {
+  display: flex;
+  padding: 0 48px;
+  border-bottom: 1px solid rgba(74, 174, 232, 0.12);
+  background-color: #0b1e3a;
+}
+
+.permit-tab {
+  padding: 16px 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: #7a9ec7;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.permit-tab:hover { color: #e8f0fb; }
+
+.permit-tab.active {
+  color: #4baee8;
+  border-bottom-color: #4baee8;
+}
+
+.guidelines-body {
+  padding: 40px 48px 64px;
+}
+
+.permit-panel { display: none; }
+.permit-panel.active { display: block; }
+
+/* RULES TABLE */
+.rules-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.rules-table th {
+  font-size: 0.67rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2e4d6e;
+  font-weight: 500;
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(74, 174, 232, 0.1);
+}
+
+.rules-table td {
+  font-size: 0.82rem;
+  color: #c4d8f0;
+  padding: 13px 14px;
+  border-bottom: 1px solid rgba(74, 174, 232, 0.06);
+  vertical-align: top;
+}
+
+.rules-table tr:last-child td { border-bottom: none; }
+
+.rules-table tr:hover td {
+  background-color: rgba(74, 174, 232, 0.04);
+}
+
+.rule-badge {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.rule-badge.required  { background: rgba(224,92,92,0.1);  color: #e05c5c; border: 1px solid rgba(224,92,92,0.25); }
+.rule-badge.important { background: rgba(240,185,66,0.1); color: #f0b942; border: 1px solid rgba(240,185,66,0.25); }
+.rule-badge.info      { background: rgba(74,174,232,0.1); color: #4baee8; border: 1px solid rgba(74,174,232,0.2); }
+
+
+
+
