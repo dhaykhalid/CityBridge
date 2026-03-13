@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Permits - CityBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="user-header">
+    <svg viewBox="0 0 500 72" width="320" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="44" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">
+        <tspan fill="#e8f0fb">City</tspan><tspan fill="#4baee8">Bridge</tspan>
+      </text>
+      <line x1="0" y1="52" x2="220" y2="52" stroke="#4baee8" stroke-width="1.6" opacity="0.4" />
+      <text x="0" y="67" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" fill="#7dcef8" letter-spacing="4" opacity="0.82">CONNECTING COMMUNITIES</text>
+    </svg>
+
+    <nav>
+      <a href="user.html">Profile</a>
+      <a href="my-permits.html" class="active">My Permits</a>
+      <a href="reqprimt.html">Request a Permit</a>
+      <a href="safety-guidelines.html">Safety Guidelines</a>
+      <a href="authorities.html">View Authorities</a>
+      <a href="Home.html" class="logout">Log Out</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+
+    <div class="page-title">
+      <h1>My Permits</h1>
+      <p>Track, filter, and manage all your permit requests in one place.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <p>Total Permits</p>
+        <span>3</span>
+      </div>
+      <div class="stat">
+        <p>Pending</p>
+        <span class="pending">1</span>
+      </div>
+      <div class="stat">
+        <p>Approved</p>
+        <span class="approved">1</span>
+      </div>
+      <div class="stat">
+        <p>Rejected</p>
+        <span class="rejected">1</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Requested Permits</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Permit ID</th>
+            <th>Type</th>
+            <th>Submitted</th>
+            <th>Expiry Date</th>
+            <th>
+              <div class="status-filter-header">
+                <span>Status</span>
+                <select id="statusFilter" onchange="filterPermits(this.value)">
+                  <option value="all">All</option>
+                  <option value="pending">Pending</option>
+                  <option value="approved">Approved</option>
+                  <option value="rejected">Rejected</option>
+                </select>
+              </div>
+            </th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="permit-row" data-status="pending">
+  <td>#CB-0041</td>
+  <td>Labor Permit</td>
+  <td>Mar 5, 2026</td>
+  <td>—</td>
+  <td><span class="badge pending">Pending</span></td>
+  <td><a href="permit-details-pending.html" class="table-link">View Details</a></td>
+</tr>
+
+<tr class="permit-row" data-status="approved">
+  <td>#CB-0038</td>
+  <td>Construction Equipment Permit</td>
+  <td>Feb 28, 2026</td>
+  <td>Mar 28, 2026</td>
+  <td><span class="badge approved">Approved</span></td>
+  <td><a href="permit-details-approved.html" class="table-link">View Details</a></td>
+</tr>
+
+<tr class="permit-row" data-status="rejected">
+  <td>#CB-0035</td>
+  <td>Medical Device Permit</td>
+  <td>Feb 20, 2026</td>
+  <td>—</td>
+  <td><span class="badge rejected">Rejected</span></td>
+  <td><a href="permit-details-rejected.html" class="table-link">View Details</a></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CityBridge. Smart cities, seamless access.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/citybridge" aria-label="Instagram">Instagram</a>
+      <a href="https://twitter.com/citybridge" aria-label="X">X</a>
+      <a href="mailto:citybridge@email.com" aria-label="Email">Email</a>
+    </div>
+  </footer>
+
+  <script>
+    function filterPermits(status) {
+      const rows = document.querySelectorAll('.permit-row');
+
+      rows.forEach(row => {
+        if (status === 'all' || row.dataset.status === status) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

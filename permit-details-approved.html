@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permit Details - Approved</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="user-header">
+    <svg viewBox="0 0 500 72" width="320" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="44" font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-1">
+        <tspan fill="#e8f0fb">City</tspan><tspan fill="#4baee8">Bridge</tspan>
+      </text>
+      <line x1="0" y1="52" x2="220" y2="52" stroke="#4baee8" stroke-width="1.6" opacity="0.4" />
+      <text x="0" y="67" font-family="'DM Sans', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="300" fill="#7dcef8" letter-spacing="4" opacity="0.82">CONNECTING COMMUNITIES</text>
+    </svg>
+
+    <nav>
+      <a href="user.html">Profile</a>
+      <a href="my-permits.html" class="active">My Permits</a>
+      <a href="reqprimt.html">Request a Permit</a>
+      <a href="safety-guidelines.html">Safety Guidelines</a>
+      <a href="authorities.html">View Authorities</a>
+      <a href="Home.html" class="logout">Log Out</a>
+    </nav>
+  </header>
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+    <a href="user.html">Dashboard</a>
+    <span>›</span>
+    <a href="my-permits.html">My Permits</a>
+    <span>›</span>
+    <span>Permit Details</span>
+  </div>
+</div>
+  <main class="dashboard">
+
+    <div class="page-title">
+      <h1>Permit Details</h1>
+      <p>Review your approved permit information.</p>
+    </div>
+
+    <div class="details-grid">
+      <div class="panel">
+        <h3>Permit Summary</h3>
+
+        <div class="info-row">
+          <span class="label">Permit ID</span>
+          <span class="value">#CB-0038</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Permit Type</span>
+          <span class="value">Construction Equipment Permit</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Submission Date</span>
+          <span class="value">Feb 28, 2026</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Status</span>
+          <span class="value"><span class="badge approved">Approved</span></span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Expiry Date</span>
+          <span class="value">Mar 28, 2026</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Applicant Information</h3>
+
+        <div class="info-row">
+          <span class="label">Full Name</span>
+          <span class="value">Dhay Alsumayt</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">ID Number</span>
+          <span class="value">1029384756</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Email</span>
+          <span class="value">dhay@gmail.com</span>
+        </div>
+
+        <div class="info-row">
+          <span class="label">Phone Number</span>
+          <span class="value">+966 550886681</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Permit Details</h3>
+
+      <div class="two-panels permit-info-grid">
+        <div>
+          <div class="info-row">
+            <span class="label">Equipment Type</span>
+            <span class="value">Excavator</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Serial Number</span>
+            <span class="value">EQ-78231</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Operator Name</span>
+            <span class="value">Mohammed Alharbi</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Operator License No.</span>
+            <span class="value">LIC-20493</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="info-row">
+            <span class="label">Equipment Document</span>
+            <span class="value"><a href="#" class="table-link">View File</a></span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Safety Certificate</span>
+            <span class="value"><a href="#" class="table-link">View File</a></span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Approval Date</span>
+            <span class="value">Mar 1, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Actions</h3>
+      <div class="action-row">
+        <a href="my-permits.html" class="btn btn-admin">Back</a>
+        <a href="#" class="btn btn-primary" onclick="renewPermit()">Renew Permit</a>
+      </div>
+      <p class="action-note">This permit has been approved. You can submit a renewal request if needed.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CityBridge. Smart cities, seamless access.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/citybridge" aria-label="Instagram">Instagram</a>
+      <a href="https://twitter.com/citybridge" aria-label="X">X</a>
+      <a href="mailto:citybridge@email.com" aria-label="Email">Email</a>
+    </div>
+  </footer>
+<script>
+function renewPermit(){
+    alert("Permit renewed successfully! The expiry date has been extended.");
+    window.location.href = "my-permits.html";
+}
+</script>
+</body>
+</html>

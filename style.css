@@ -724,6 +724,52 @@ footer p {
 .rule-badge.important { background: rgba(240,185,66,0.1); color: #f0b942; border: 1px solid rgba(240,185,66,0.25); }
 .rule-badge.info      { background: rgba(74,174,232,0.1); color: #4baee8; border: 1px solid rgba(74,174,232,0.2); }
 
+.status-filter-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-filter-header span {
+  color: #7a9ec7;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.status-filter-header select {
+  background-color: #08172d;
+  color: #cfe3ff;
+  border: 1px solid rgba(74, 174, 232, 0.2);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  outline: none;
+}
+
+.status-filter-header select:hover,
+.status-filter-header select:focus {
+  border-color: #4baee8;
+  box-shadow: 0 0 0 2px rgba(75, 174, 232, 0.08);
+}
 
 
+.table-link {
+  font-size: 0.72rem;
+  color: #4baee8;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0;
+  transition: color 0.2s;
+}
 
+.table-link:hover {
+  color: #7dcef8;
+  text-decoration: underline;
+}
+.action-note{
+    margin-top: 16px;
+}
