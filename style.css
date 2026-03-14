@@ -816,3 +816,39 @@ font-size:0.88rem;
 color:#7a9ec7;
 line-height:1.6;
 }
+
+/* admin buttons */
+.btn.approve{
+background: rgba(75,201,138,0.1); 
+ color: #4bc98a; 
+ border: 1px solid rgba(75,201,138,0.25);
+padding:6px 12px;
+font-size:12px;
+}
+
+.btn.reject{
+background: rgba(224,92,92,0.1);
+  color: #e05c5c; 
+  border: 1px solid rgba(224,92,92,0.25); 
+padding:6px 12px;
+font-size:12px;
+}
+
+
+/* rejection textarea */
+
+#reject-reason{
+width:100%;
+height:140px;
+background:#7dcef8;
+color:#e8f0fb;
+border:2px solid #274b72;
+border-radius:6px;
+padding:10px;
+resize:none;
+margin-top:12px;
+}
+
+#reject-box{
+margin-top:10px;
+}
