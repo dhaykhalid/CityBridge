@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CityBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="user-header">
+
+<svg viewBox="0 0 500 72" width="320">
+<text x="0" y="44" font-size="42" font-weight="700">
+<tspan fill="#e8f0fb">City</tspan>
+<tspan fill="#4baee8">Bridge</tspan>
+</text>
+</svg>
+
+<nav>
+<a href="Home.html" class="logout">Log Out</a>
+</nav>
+
+</header>
+
+<div class="breadcrumb-container">
+  <div class="breadcrumb">
+
+   
+
+   
+
+  </div>
+</div>
+
+<main class="dashboard">
+
+<div class="page-title">
+<h1>Admin Dashboard</h1>
+<p>Manage and review all permit requests submitted by users.</p>
+</div>
+
+<div class="panel">
+  <h3>Administrator Information</h3>
+
+  <div class="info-row">
+    <span class="label">First Name</span>
+    <span class="value">wasan</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Last Name</span>
+    <span class="value">Alamri</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Role</span>
+    <span class="value">System Administrator</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Phone Number</span>
+    <span class="value">+966 5593286681</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Email</span>
+    <span class="value">wasan@citybridge.com</span>
+  </div>
+
+  <div class="info-row">
+    <span class="label">Username</span>
+    <span class="value">WasanAlamri</span>
+  </div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<p>Total Requests</p>
+<span>6</span>
+</div>
+
+<div class="stat">
+<p>Pending</p>
+<span class="pending">4</span>
+</div>
+
+<div class="stat">
+<p>Approved</p>
+<span class="approved">2</span>
+</div>
+
+<div class="stat">
+<p>Rejected</p>
+<span class="rejected">1</span>
+</div>
+
+</div>
+
+<!-- Pending Requests -->
+<div class="panel">
+  <h3>Pending Requests</h3>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Permit ID</th>
+          <th>Type</th>
+          <th>Applicant</th>
+          <th>Submitted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#CB-0041</td>
+          <td>Labor Permit</td>
+          <td>Maram Khalid</td>
+          <td>Mar 5, 2026</td>
+          <td><a href="admin-permit-view.html?status=pending">View</a></td>
+        </tr>
+
+        <tr>
+          <td>#CB-0042</td>
+          <td>Electronic Device</td>
+          <td>Khalid Almutairi</td>
+          <td>Mar 7, 2026</td>
+          <td><a href="admin-permit-view.html?status=pending">View</a></td>
+        </tr>
+		<tr>
+          <td>#CB-0043</td>
+          <td>Electronic Device</td>
+          <td>Leen Ahmed</td>
+          <td>Mar 10, 2026</td>
+          <td><a href="admin-permit-view.html?status=pending">View</a></td>
+        </tr>
+		
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Approved Requests -->
+<div class="panel">
+  <h3>Approved Requests</h3>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Permit ID</th>
+          <th>Type</th>
+          <th>Applicant</th>
+          <th>Submitted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#CB-0038</td>
+          <td>Construction Equipment</td>
+          <td>Ahmed Alharbi</td>
+          <td>Feb 28, 2026</td>
+          <td><a href="admin-permit-view.html?status=approved">View</a></td>
+        </tr>
+		<tr>
+          <td>#CB-0038</td>
+          <td>Construction Equipment</td>
+          <td>Mohammed Alharbi</td>
+          <td>Feb 28, 2026</td>
+          <td><a href="admin-permit-view.html?status=approved">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- Rejected Requests -->
+<div class="panel">
+  <h3>Rejected Requests</h3>
+
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th>Permit ID</th>
+          <th>Type</th>
+          <th>Applicant</th>
+          <th>Submitted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#CB-0035</td>
+          <td>Medical Device</td>
+          <td>Sarah Alqahtani</td>
+          <td>Feb 20, 2026</td>
+          <td><a href="admin-permit-view.html?status=rejected">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+
+<footer>
+
+<p>© 2026 CityBridge. Smart cities, seamless access.</p>
+
+</footer>
+
+</body>
+</html>
