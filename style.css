@@ -773,3 +773,46 @@ footer p {
 .action-note{
     margin-top: 16px;
 }
+.company-list{
+max-height:420px;
+overflow-y:auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.company-card{
+display:flex;
+align-items:center;
+gap:22px;
+background:#08172d;
+border:1px solid rgba(74,174,232,0.15);
+padding:22px;
+border-radius:8px;
+min-height:100px;
+}
+
+.company-card:hover{
+background:#0b1e3a;
+}
+
+.company-logo{
+width:90px;
+height:90px;
+object-fit:contain;
+background:white;
+border-radius:8px;
+padding:10px;
+}
+
+.company-card h4{
+font-size:1.05rem;
+color:#e8f0fb;
+margin-bottom:6px;
+}
+
+.company-card p{
+font-size:0.88rem;
+color:#7a9ec7;
+line-height:1.6;
+}
