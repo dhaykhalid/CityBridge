@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - CityBridge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="user-header">
+
+<svg viewBox="0 0 500 72" width="320">
+<text x="0" y="44" font-size="42" font-weight="700">
+<tspan fill="#e8f0fb">City</tspan>
+<tspan fill="#4baee8">Bridge</tspan>
+</text>
+</svg>
+
+<nav>
+<a href="user.html">Profile</a>
+<a href="my-permits.html">My Permits</a>
+<a href="reqprimt.html">Request a Permit</a>
+<a href="safety-guidelines.html">Safety Guidelines</a>
+<a href="authorities.html" class="active">View Authorities</a>
+<a href="Home.html" class="logout">Log Out</a>
+</nav>
+
+</header>
+
+
+
+<main>
+
+<div class="guidelines-hero">
+
+<h1>Authorities & Resources</h1>
+<p>Explore authorized companies operating in Saudi Arabia that provide labor, equipment, medical, and electronic resources for smart city projects.</p>
+
+</div>
+
+
+<div class="permit-tabs">
+
+<button class="permit-tab active" onclick="show('labor',this)">👷 Labor</button>
+<button class="permit-tab" onclick="show('construction',this)">🏗 Construction</button>
+<button class="permit-tab" onclick="show('medical',this)">🏥 Medical Devices</button>
+<button class="permit-tab" onclick="show('electronic',this)">💻 Electronic Devices</button>
+
+</div>
+
+
+
+<div class="guidelines-body">
+
+
+<!-- LABOR -->
+
+<div id="panel-labor" class="permit-panel active">
+
+<p class="section-label">Authorized Labor Companies</p>
+
+<div class="company-list">
+
+<div class="company-card">
+<img src="logos/smasco.png" class="company-logo">
+<div>
+<h4>SMASCO (Saudi Manpower Solutions Company)</h4>
+<p>Saudi company specializing in workforce supply and staffing solutions across construction, engineering, and industrial sectors.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/nesma.png" class="company-logo">
+<div>
+<h4>Nesma & Partners</h4>
+<p>Major Saudi contractor providing workforce services for infrastructure, construction, and energy projects.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/Alfanar.png" class="company-logo">
+<div>
+<h4>Alfanar</h4>
+<p>Saudi engineering and construction company supplying skilled technical labor and industrial services.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- CONSTRUCTION -->
+
+<div id="panel-construction" class="permit-panel">
+
+<p class="section-label">Authorized Construction Equipment Companies</p>
+
+<div class="company-list">
+
+<div class="company-card">
+<img src="logos/caterpillar.png" class="company-logo">
+<div>
+<h4>Caterpillar</h4>
+<p>Global manufacturer of heavy construction machinery widely used in infrastructure and mining projects in Saudi Arabia.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/komatsu.png" class="company-logo">
+<div>
+<h4>Komatsu</h4>
+<p>Japanese company producing advanced construction and mining equipment used in large scale projects.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/liebherr.png" class="company-logo">
+<div>
+<h4>Liebherr</h4>
+<p>International company known for heavy cranes and construction machinery used in major development projects.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- MEDICAL -->
+
+<div id="panel-medical" class="permit-panel">
+
+<p class="section-label">Authorized Medical Device Companies</p>
+
+<div class="company-list">
+
+<div class="company-card">
+<img src="logos/philips.png" class="company-logo">
+<div>
+<h4>Philips Healthcare</h4>
+<p>Global provider of hospital monitoring systems, diagnostic imaging equipment, and healthcare technology.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/siemens.png" class="company-logo">
+<div>
+<h4>Siemens Healthineers</h4>
+<p>Leading company delivering medical imaging equipment and advanced healthcare diagnostic technologies.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/gehealth.png" class="company-logo">
+<div>
+<h4>GE Healthcare</h4>
+<p>Manufacturer of advanced medical equipment including MRI, ultrasound, and clinical diagnostic systems.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/drager.png" class="company-logo">
+<div>
+<h4>Dräger</h4>
+<p>German medical technology company specializing in patient monitoring, anesthesia machines, and hospital safety systems.</p>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ELECTRONIC -->
+
+<div id="panel-electronic" class="permit-panel">
+
+<p class="section-label">Authorized Electronic Device Companies</p>
+
+<div class="company-list">
+
+<div class="company-card">
+<img src="logos/cisco.png" class="company-logo">
+<div>
+<h4>Cisco</h4>
+<p>Technology company providing networking infrastructure, cybersecurity systems, and smart city connectivity solutions.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/huawei.png" class="company-logo">
+<div>
+<h4>Huawei</h4>
+<p>Global telecommunications company delivering smart city infrastructure and advanced communication technologies.</p>
+</div>
+</div>
+
+<div class="company-card">
+<img src="logos/honeywell.png" class="company-logo">
+<div>
+<h4>Honeywell</h4>
+<p>Industrial technology company producing smart sensors, automation systems, and safety monitoring equipment.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</main>
+
+
+
+<script>
+
+function show(name,btn){
+
+document.querySelectorAll('.permit-panel').forEach(p=>{
+p.classList.remove('active')
+})
+
+document.querySelectorAll('.permit-tab').forEach(t=>{
+t.classList.remove('active')
+})
+
+document.getElementById('panel-'+name).classList.add('active')
+btn.classList.add('active')
+
+}
+
+</script>
+
+
+</body>
+
+
+</html>
