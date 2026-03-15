@@ -137,19 +137,5 @@
     </div>
   </footer>
 
-  <script>
-    function filterPermits(status) {
-      const rows = document.querySelectorAll('.permit-row');
-
-      rows.forEach(row => {
-        if (status === 'all' || row.dataset.status === status) {
-          row.style.display = '';
-        } else {
-          row.style.display = 'none';
-        }
-      });
-    }
-  </script>
-
 </body>
 </html>

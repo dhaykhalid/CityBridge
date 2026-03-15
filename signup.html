@@ -30,18 +30,18 @@
       <h2>Register Your Organization</h2>
       <p class="subtitle">Create a CityBridge account to start submitting entry permits</p>
 
-      <form action="user.html" method="post">
+      <form id="signupForm" action="user.html" method="post" novalidate>
 
         <p class="section-label">Company Information</p>
 
         <div class="field">
           <label for="company">Company Name</label>
-          <input type="text" id="company" name="company_name" placeholder="e.g. Al-Rashidi Construction Co." required />
+          <input type="text" id="company" name="company_name" placeholder="e.g. Al-Rashidi Construction Co." />
         </div>
 
         <div class="field">
           <label for="industry">Industry / Sector</label>
-          <select id="industry" name="industry" required>
+          <select id="industry" name="industry">
             <option value="" disabled selected>Select sector</option>
             <option value="construction">Construction</option>
             <option value="healthcare">Healthcare</option>
@@ -57,27 +57,27 @@
         <div class="two-col">
           <div class="field">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="first_name" placeholder="First name" required />
+            <input type="text" id="firstName" name="first_name" placeholder="First name" />
           </div>
           <div class="field">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="last_name" placeholder="Last name" required />
+            <input type="text" id="lastName" name="last_name" placeholder="Last name" />
           </div>
         </div>
 
         <div class="field">
           <label for="jobTitle">Job Title</label>
-          <input type="text" id="jobTitle" name="job_title" placeholder="e.g. Operations Manager" required />
+          <input type="text" id="jobTitle" name="job_title" placeholder="e.g. Operations Manager" />
         </div>
 
         <div class="two-col">
           <div class="field">
             <label for="email">Work Email</label>
-            <input type="email" id="email" name="email" placeholder="name@company.com" required />
+            <input type="email" id="email" name="email" placeholder="name@company.com" />
           </div>
           <div class="field">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+966 5X XXX XXXX" required />
+            <input type="tel" id="phone" name="phone" placeholder="+966 5X XXX XXXX" />
           </div>
         </div>
 
@@ -85,17 +85,17 @@
 
         <div class="field">
           <label for="username">Username</label>
-          <input type="text" id="username" name="username" placeholder="Choose a username" required />
+          <input type="text" id="username" name="username" placeholder="Choose a username" />
         </div>
 
         <div class="two-col">
           <div class="field">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Min. 8 characters" required />
+            <input type="password" id="password" name="password" placeholder="Min. 8 characters" />
           </div>
           <div class="field">
             <label for="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" name="confirm_password" placeholder="Repeat password" required />
+            <input type="password" id="confirmPassword" name="confirm_password" placeholder="Repeat password" />
           </div>
         </div>
 
@@ -125,7 +125,7 @@
           <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
         </svg>
       </a>
-      <a href="mailto:citybridge@email.com" aria-label="Email">
+      <a href="/cdn-cgi/l/email-protection#91f2f8e5e8f3e3f8f5f6f4d1f4fcf0f8fdbff2fefc" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
         </svg>
@@ -137,6 +137,6 @@
       </a>
     </div>
   </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
