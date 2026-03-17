@@ -183,7 +183,7 @@ main {
   text-transform: uppercase;
   border-radius: 3px;
   cursor: pointer;
-  padding: 13px 42px;
+  padding: 8px 22px;
   border: none;
   transition: box-shadow 0.2s, background 0.2s;
 }
@@ -867,7 +867,10 @@ footer p {
   text-decoration: underline;
 }
 .action-note{
-    margin-top: 16px;
+    margin-top: 14px;
+    font-size: 0.75rem;
+    color: #3a5a7a;
+    line-height: 1.5;
 }
 .company-list{
 max-height:420px;
@@ -957,4 +960,4 @@ margin-top:10px;
   pointer-events: none;
   z-index: 0;
 }
-header, .user-header, main, footer { position: relative; z-index: 1; } 
+header, .user-header, main, footer { position: relative; z-index: 1; }
