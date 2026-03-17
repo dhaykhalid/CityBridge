@@ -107,3 +107,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 }); 
+// ── DOTS BACKGROUND ──
+const c = document.createElement('canvas');
+c.id = 'dots-canvas';
+document.body.prepend(c);
+const ctx = c.getContext('2d');
+let dots = [];
+function init() {
+  c.width = innerWidth; c.height = innerHeight;
+  dots = Array.from({length: 80}, () => ({
+    x: Math.random() * c.width, y: Math.random() * c.height,
+    vx: (Math.random()-.5)*.4,  vy: (Math.random()-.5)*.4
+  }));
+}
+function loop() {
+  ctx.clearRect(0,0,c.width,c.height);
+  dots.forEach(d => {
+    d.x += d.vx; d.y += d.vy;
+    if(d.x<0||d.x>c.width)  d.vx*=-1;
+    if(d.y<0||d.y>c.height) d.vy*=-1;
+    ctx.beginPath();
+    ctx.arc(d.x, d.y, 1.5, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba(75,174,232,0.5)';
+    ctx.fill();
+  });
+  for(let i=0;i<dots.length;i++) for(let j=i+1;j<dots.length;j++) {
+    const dx=dots[i].x-dots[j].x, dy=dots[i].y-dots[j].y;
+    const dist=Math.hypot(dx,dy);
+    if(dist<120) {
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(75,174,232,${(1-dist/120)*.15})`;
+      ctx.moveTo(dots[i].x,dots[i].y); ctx.lineTo(dots[j].x,dots[j].y);
+      ctx.stroke();
+    }
+  }
+  requestAnimationFrame(loop);
+}
+init(); loop();
+window.addEventListener('resize', init); 
