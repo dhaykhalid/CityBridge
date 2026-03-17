@@ -32,20 +32,18 @@
 <main>
 
 <div class="guidelines-hero">
-
-<h1>Authorities & Resources</h1>
-<p>Explore authorized companies operating in Saudi Arabia that provide labor, equipment, medical, and electronic resources for smart city projects.</p>
-
+  <div class="guidelines-hero-inner">
+    <h1>Authorities <span class="hero-accent">&amp; Resources</span></h1>
+    <p>Explore authorized companies operating in Saudi Arabia that provide labor, equipment, medical, and electronic resources for smart city projects.</p>
+  </div>
 </div>
 
 
 <div class="permit-tabs">
-
-<button class="permit-tab active" onclick="show('labor',this)"> Labor</button>
-<button class="permit-tab" onclick="show('construction',this)">Construction</button>
-<button class="permit-tab" onclick="show('medical',this)"> Medical Devices</button>
-<button class="permit-tab" onclick="show('electronic',this)"> Electronic Devices</button>
-
+  <button class="permit-tab active" onclick="show('labor',this)"> Labor</button>
+  <button class="permit-tab" onclick="show('construction',this)"> Construction</button>
+  <button class="permit-tab" onclick="show('medical',this)"> Medical Devices</button>
+  <button class="permit-tab" onclick="show('electronic',this)"> Electronic Devices</button>
 </div>
 
 
@@ -230,7 +228,7 @@
           <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
         </svg>
       </a>
-      <a href="mailto:citybridge@email.com" aria-label="Email">
+      <a href="/cdn-cgi/l/email-protection#c2a1abb6bba0b0aba6a5a782a7afa3abaeeca1adaf" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
         </svg>
@@ -245,26 +243,14 @@
 
 
 <script>
-
-function show(name,btn){
-
-document.querySelectorAll('.permit-panel').forEach(p=>{
-p.classList.remove('active')
-})
-
-document.querySelectorAll('.permit-tab').forEach(t=>{
-t.classList.remove('active')
-})
-
-document.getElementById('panel-'+name).classList.add('active')
-btn.classList.add('active')
-
+function show(name, btn) {
+  document.querySelectorAll('.permit-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.permit-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  btn.classList.add('active');
 }
-
 </script>
 
 <script src="script.js"></script>
 </body>
-
-
 </html>
