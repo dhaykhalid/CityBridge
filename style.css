@@ -914,6 +914,31 @@ color:#7a9ec7;
 line-height:1.6;
 }
 
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #4baee8;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  pointer-events: none;
+}
+
+.company-card:hover .card-link {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.card-link:hover {
+  color: #7dcef8;
+  text-decoration: underline;
+}
+
 /* admin buttons */
 .btn.approve{
 background: rgba(75,201,138,0.1); 
