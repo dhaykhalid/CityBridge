@@ -880,7 +880,7 @@ gap:18px;
 
 .company-card{
 display:flex;
-align-items:center;
+align-items:stretch;
 gap:22px;
 background:#08172d;
 border:1px solid rgba(74,174,232,0.15);
@@ -900,6 +900,12 @@ object-fit:contain;
 background:white;
 border-radius:8px;
 padding:10px;
+flex-shrink:0;
+align-self:center;
+}
+
+.company-card > div {
+  flex: 1;
 }
 
 .company-card h4{
@@ -915,22 +921,23 @@ line-height:1.6;
 }
 
 .card-link {
-  display: inline-block;
-  margin-top: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  align-self: flex-end;
   font-size: 0.8rem;
   color: #4baee8;
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 0.02em;
   opacity: 0;
-  transform: translateY(4px);
+  transform: translateX(6px);
   transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
   pointer-events: none;
 }
 
 .company-card:hover .card-link {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   pointer-events: auto;
 }
 
