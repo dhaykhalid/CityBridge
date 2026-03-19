@@ -873,8 +873,6 @@ footer p {
     line-height: 1.5;
 }
 .company-list{
-max-height:420px;
-overflow-y:auto;
 display:flex;
 flex-direction:column;
 gap:18px;
