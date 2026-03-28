@@ -39,7 +39,90 @@ document.addEventListener('DOMContentLoaded', function () {
         input.style.borderColor = '';
     }
 
+const permitForm = document.getElementById('permitForm');
+ 
+    if (permitForm) {
+      var alwaysRequired = [
+            { id: 'fullname',   rule: function (v) { return v.trim() ? null : 'Full name is required.'; } },
+            { id: 'idNumber',   rule: function (v) { return v.trim() ? null : 'ID number is required.'; } },
+            { id: 'email',      rule: function (v) { return validateEmail(v); } },
+            { id: 'phone',      rule: function (v) { return v.trim() ? null : 'Phone number is required.'; } },
+            { id: 'permitType', rule: function (v) { return v ? null : 'Please select a permit type.'; } }
+        ];
+ 
+        // fields that only get validated based on the selected permit type
+        var conditionalFields = {
+            labor: [
+                { id: 'workers',        rule: function (v) { return v ? null : 'Number of workers is required.'; } },
+                { id: 'job_title',      rule: function (v) { return v.trim() ? null : 'Job title is required.'; } },
+                { id: 'supervisor',     rule: function (v) { return v.trim() ? null : 'Supervisor name is required.'; } },
+                { id: 'employer',       rule: function (v) { return v.trim() ? null : 'Employer name is required.'; } },
+                { id: 'labor_contract', rule: function (v) { return v ? null : 'Labor contract file is required.'; } }
+            ],
+            equipment: [
+                { id: 'equipment_type',   rule: function (v) { return v.trim() ? null : 'Equipment type is required.'; } },
+                { id: 'serial_number',    rule: function (v) { return v.trim() ? null : 'Serial number is required.'; } },
+                { id: 'operator',         rule: function (v) { return v.trim() ? null : 'Operator name is required.'; } },
+                { id: 'operator_license', rule: function (v) { return v.trim() ? null : 'Operator license number is required.'; } },
+                { id: 'equipment_docs',   rule: function (v) { return v ? null : 'Equipment documents are required.'; } }
+            ],
+            medical: [
+                { id: 'device_name',   rule: function (v) { return v.trim() ? null : 'Device name is required.'; } },
+                { id: 'manufacturer',  rule: function (v) { return v.trim() ? null : 'Manufacturer is required.'; } },
+                { id: 'facility_name', rule: function (v) { return v.trim() ? null : 'Facility name is required.'; } },
+                { id: 'device_cert',   rule: function (v) { return v ? null : 'Device certification document is required.'; } }
+            ],
+            electronic: [
+                { id: 'device_type',         rule: function (v) { return v.trim() ? null : 'Device type is required.'; } },
+                { id: 'device_manufacturer', rule: function (v) { return v.trim() ? null : 'Manufacturer is required.'; } },
+                { id: 'device_model',        rule: function (v) { return v.trim() ? null : 'Model is required.'; } },
+                { id: 'device_quantity',     rule: function (v) { return v ? null : 'Quantity is required.'; } },
+                { id: 'use_type',            rule: function (v) { return v ? null : 'Please select a use type.'; } },
+                { id: 'tech_spec',           rule: function (v) { return v ? null : 'Technical specification sheet is required.'; } }
+            ]
+        };
+ 
+        // clear error when user starts typing or changes a field
+        alwaysRequired.forEach(function (f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            el.addEventListener('input',  function () { hideError(el); });
+            el.addEventListener('change', function () { hideError(el); });
+        });
+ 
+        // on form submit
+        permitForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var valid = true;
+ 
+            // get the selected permit type
+            var type = document.getElementById('permitType').value;
+ 
+            // combine always-required + the conditional fields for the selected type
+            var fieldsToCheck = alwaysRequired.concat(conditionalFields[type] || []);
+ 
+            // run all the rules
+            fieldsToCheck.forEach(function (f) {
+                var el = document.getElementById(f.id);
+                if (!el) return;
+                var err = f.rule(el.value);
+                if (err) {
+                    showError(el, err);
+                    valid = false;
+                } else {
+                    hideError(el);
+                }
+            });
+ 
+            if (valid) {
+                alert('Permit request submitted successfully!');
+                // replace the alert with your actual form submission later
+            }
+        });
+    }
+ 
 
+ 
     // LOGIN
 
     const loginForm = document.getElementById('loginForm');
@@ -145,3 +228,6 @@ function loop() {
 }
 init(); loop();
 window.addEventListener('resize', init); 
+
+ 
+    

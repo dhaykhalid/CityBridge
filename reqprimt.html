@@ -31,7 +31,7 @@
     <h2>Permit Request</h2>
     <p class="subtitle">Submit a permit request through the CityBridge platform</p>
 
-    <form>
+    <form id="permitForm" action="reqprimt.html" method="post" novalidate>
 
       <p class="section-label">Applicant Information</p>
 
@@ -83,22 +83,22 @@
           <div class="two-col">
             <div class="field">
               <label>Number of Workers</label>
-              <input type="number" name="workers" placeholder="e.g. 5" />
+              <input type="number" id="workers" name="workers" placeholder="e.g. 5" />
             </div>
             <div class="field">
               <label>Job Title</label>
-              <input type="text" name="job_title" placeholder="e.g. Site Technician" />
+              <input type="text" id="job_title" name="job_title" placeholder="e.g. Site Technician" />
             </div>
           </div>
 
           <div class="two-col">
             <div class="field">
               <label>Supervisor Name</label>
-              <input type="text" name="supervisor" placeholder="On-site supervisor" />
+              <input type="text" id="supervisor" name="supervisor" placeholder="On-site supervisor" />
             </div>
             <div class="field">
               <label>Employer Name</label>
-              <input type="text" name="employer" placeholder="Registered company name" />
+              <input type="text" id="employer" name="employer" placeholder="Registered company name" />
             </div>
           </div>
 
@@ -106,12 +106,9 @@
 
           <div class="field">
             <label>Labor Contract</label>
-            <input type="file" name="labor_contract" accept=".pdf,.jpg,.png" />
+            <input type="file" id="labor_contract" name="labor_contract" accept=".pdf,.jpg,.png" />
           </div>
-          <div class="field">
-            <label>Medical Fitness Certificate</label>
-            <input type="file" name="medical_fitness" accept=".pdf,.jpg,.png" />
-          </div>
+          
         </div>
 
 
@@ -123,22 +120,22 @@
           <div class="two-col">
             <div class="field">
               <label>Equipment Type</label>
-              <input type="text" name="equipment_type" placeholder="e.g. Tower Crane" />
+              <input type="text" id="equipment_type" name="equipment_type" placeholder="e.g. Tower Crane" />
             </div>
             <div class="field">
               <label>Serial Number</label>
-              <input type="text" name="serial_number" placeholder="Equipment serial" />
+              <input type="text" id="serial_number" name="serial_number" placeholder="Equipment serial" />
             </div>
           </div>
 
           <div class="two-col">
             <div class="field">
               <label>Operator Name</label>
-              <input type="text" name="operator" placeholder="Licensed operator" />
+              <input type="text" id="operator" name="operator" placeholder="Licensed operator" />
             </div>
             <div class="field">
               <label>Operator License Number</label>
-              <input type="text" name="operator_license" placeholder="License number" />
+              <input type="text" id="operator_license" name="operator_license" placeholder="License number" />
             </div>
           </div>
 
@@ -146,7 +143,7 @@
 
           <div class="field">
             <label>Equipment Registration & Insurance</label>
-            <input type="file" name="equipment_docs" accept=".pdf,.jpg,.png" />
+            <input type="file" id="equipment_docs" name="equipment_docs" accept=".pdf,.jpg,.png" />
           </div>
           </div>
           
@@ -158,49 +155,28 @@
           <div class="two-col">
             <div class="field">
               <label>Device Name</label>
-              <input type="text" name="device_name" placeholder="Official device name" />
+              <input type="text" id="device_name" name="device_name" placeholder="Official device name" />
             </div>
             <div class="field">
               <label>Manufacturer</label>
-              <input type="text" name="manufacturer" placeholder="Device manufacturer" />
+              <input type="text" id="manufacturer" name="manufacturer" placeholder="Device manufacturer" />
             </div>
           </div>
 
-          <div class="two-col">
-            <div class="field">
-              <label>Model</label>
-              <input type="text" name="model" placeholder="Model number" />
-            </div>
-            <div class="field">
-              <label>Certification Standard</label>
-              <select name="cert_standard">
-                <option value="">Select</option>
-                <option value="fda">FDA</option>
-                <option value="ce">CE</option>
-                <option value="sfda">SFDA</option>
-              </select>
-            </div>
-          </div>
+          
 
           <div class="field">
             <label>Facility Name</label>
-            <input type="text" name="facility_name" placeholder="Hospital or clinic name" />
+            <input type="text" id="facility_name" name="facility_name" placeholder="Hospital or clinic name" />
           </div>
 
           <p class="section-label">Attachments</p>
 
           <div class="field">
-            <label>Medical License & Registration</label>
-            <input type="file" name="med_license" accept=".pdf,.jpg,.png" />
-          </div>
-          <div class="field">
             <label>Device Certification Document</label>
-            <input type="file" name="device_cert" accept=".pdf,.jpg,.png" />
+            <input type="file" id="device_cert" name="device_cert" accept=".pdf,.jpg,.png" />
           </div>
-          <div class="field">
-            <label>Facility License</label>
-            <input type="file" name="facility_license" accept=".pdf,.jpg,.png" />
-          </div>
+         
         </div>
 
 
@@ -214,28 +190,28 @@
           <div class="two-col">
             <div class="field">
               <label>Device Type</label>
-              <input type="text" name="device_type" placeholder="e.g. IoT Sensor" />
+              <input type="text" id="device_type" name="device_type" placeholder="e.g. IoT Sensor" />
             </div>
             <div class="field">
               <label>Manufacturer</label>
-              <input type="text" name="device_manufacturer" placeholder="Manufacturer name" />
+              <input type="text" id="device_manufacturer" name="device_manufacturer" placeholder="Manufacturer name" />
             </div>
           </div>
 
           <div class="two-col">
             <div class="field">
               <label>Model</label>
-              <input type="text" name="device_model" placeholder="Model number" />
+              <input type="text" id="device_model" name="device_model" placeholder="Model number" />
             </div>
             <div class="field">
               <label>Quantity</label>
-              <input type="number" name="device_quantity" placeholder="Number of units" />
+              <input type="number" id="device_quantity" name="device_quantity" placeholder="Number of units" />
             </div>
           </div>
 
           <div class="field">
             <label>Use Type</label>
-            <select name="use_type">
+            <select id="use_type" name="use_type">
               <option value="">Select</option>
               <option value="personal">Personal Use</option>
               <option value="commercial">Commercial Deployment</option>
@@ -246,7 +222,7 @@
 
           <div class="field">
             <label>Technical Specification Sheet</label>
-            <input type="file" name="tech_spec" accept=".pdf,.jpg,.png" />
+            <input type="file" id="tech_spec" name="tech_spec" accept=".pdf,.jpg,.png" />
           </div>
       </div>
 
