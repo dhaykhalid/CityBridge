@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+  
+  <defs>
+    <linearGradient id="bridgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a7ba7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5B8DBE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Compact bridge icon -->
+  <g id="bridge-compact" transform="translate(80, 50)">
+    <!-- Main bridge deck -->
+    <path d="M 20 75 L 140 75 L 140 80 L 20 80 Z" fill="#5B8DBE"/>
+    
+    <!-- Left tower -->
+    <rect x="35" y="45" width="8" height="32" fill="#4a7ba7" rx="1"/>
+    
+    <!-- Right tower -->
+    <rect x="117" y="45" width="8" height="32" fill="#4a7ba7" rx="1"/>
+    
+    <!-- Tower tops -->
+    <circle cx="39" cy="43" r="3" fill="#7DA8D3"/>
+    <circle cx="121" cy="43" r="3" fill="#7DA8D3"/>
+    
+    <!-- Main suspension cable -->
+    <path d="M 39 45 Q 80 62 121 45" stroke="#5B8DBE" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    
+    <!-- Vertical suspension cables -->
+    <line x1="50" y1="75" x2="50" y2="52" stroke="#7DA8D3" stroke-width="1.2" opacity="0.8"/>
+    <line x1="65" y1="75" x2="65" y2="57" stroke="#7DA8D3" stroke-width="1.2" opacity="0.8"/>
+    <line x1="80" y1="75" x2="80" y2="59" stroke="#7DA8D3" stroke-width="1.2" opacity="0.8"/>
+    <line x1="95" y1="75" x2="95" y2="57" stroke="#7DA8D3" stroke-width="1.2" opacity="0.8"/>
+    <line x1="110" y1="75" x2="110" y2="52" stroke="#7DA8D3" stroke-width="1.2" opacity="0.8"/>
+    
+    <!-- Bridge supports -->
+    <path d="M 39 80 L 41 92 L 37 92 Z" fill="#2d5a8c"/>
+    <path d="M 80 80 L 82 92 L 78 92 Z" fill="#2d5a8c"/>
+    <path d="M 121 80 L 123 92 L 119 92 Z" fill="#2d5a8c"/>
+    
+    <!-- Water reflection -->
+    <ellipse cx="80" cy="95" rx="60" ry="4" fill="#5B8DBE" opacity="0.2"/>
+  </g>
+  
+  <!-- Text: CityBridge -->
+  <g id="text">
+    <text x="280" y="105" 
+          font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" 
+          font-size="58" 
+          font-weight="700" 
+          letter-spacing="-1">
+      <tspan fill="#1e3a5f">City</tspan><tspan fill="#7DA8D3">Bridge</tspan>
+    </text>
+  </g>
+  
+  <!-- Underline -->
+  <line x1="280" y1="118" x2="580" y2="118" stroke="#5B8DBE" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Tagline -->
+  <text x="280" y="140" 
+        font-family="'Helvetica Neue', 'Segoe UI', Arial, sans-serif" 
+        font-size="14" 
+        font-weight="300" 
+        fill="#7DA8D3" 
+        letter-spacing="4"
+        opacity="0.9">
+    CONNECTING COMMUNITIES
+  </text>
+</svg>
