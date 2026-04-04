@@ -1,7 +1,7 @@
 
 
 <img src="logos/logo.svg" alt="CityBridge Logo" width="800"/>
--
+
 CityBridge is a web-based entry permit management system designed for companies, institutions, and authorities operating within smart cities. The system helps users request, manage, and track permits for workers, vehicles, and equipment through a centralized digital platform.
 
 The platform aims to replace traditional paper-based processes with a more efficient and organized solution, allowing better coordination between organizations and responsible authorities.
