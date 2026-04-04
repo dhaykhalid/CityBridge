@@ -36,4 +36,13 @@ Unlike traditional systems, CityBridge offers a flexible and user-friendly exper
 - Reject permit requests with a clear rejection reason
 - Manage permit statuses
 
+# Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- PHP
+- Database (MySQL)
+- GitHub for version control
+- Jira for project management
   
