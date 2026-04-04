@@ -6,14 +6,14 @@ CityBridge is a web-based entry permit management system designed for companies,
 
 The platform aims to replace traditional paper-based processes with a more efficient and organized solution, allowing better coordination between organizations and responsible authorities.
 
-# Project Vision
+## Project Vision
 
 CityBridge focuses on improving efficiency, transparency, and coordination in entry permit management. The system provides a structured and centralized solution that simplifies permit requests, accelerates approvals, and enhances communication between stakeholders.
 
 Unlike traditional systems, CityBridge offers a flexible and user-friendly experience tailored for smart city environments.
 
 
-# User Features
+## User Features
 
 - Register a new account
 - Log in securely
@@ -27,7 +27,7 @@ Unlike traditional systems, CityBridge offers a flexible and user-friendly exper
 - Browse safety guidelines
 - View authorities and the types of resources they provide (labor, construction equipment, medical devices, electronic devices)
 
-# Admin Features
+## Admin Features
 
 - Log in securely
 - Log out securely
@@ -36,7 +36,7 @@ Unlike traditional systems, CityBridge offers a flexible and user-friendly exper
 - Reject permit requests with a clear rejection reason
 - Manage permit statuses
 
-# Project Scope
+## Project Scope
 
 CityBridge is developed as a web-based platform that supports organizations in managing entry permits within smart cities.
 
@@ -53,7 +53,7 @@ The system does NOT include:
 - Integration with external government databases
 - Advanced automation or AI-based decision systems
 
-# Technologies Used
+## Technologies Used
 
 - HTML
 - CSS
