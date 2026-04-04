@@ -36,6 +36,23 @@ Unlike traditional systems, CityBridge offers a flexible and user-friendly exper
 - Reject permit requests with a clear rejection reason
 - Manage permit statuses
 
+# Project Scope
+
+CityBridge is developed as a web-based platform that supports organizations in managing entry permits within smart cities.
+
+The system:
+
+- Runs on modern web browsers
+- Supports both desktop and mobile access
+- Uses English as the main language
+- equires basic technical skills from users
+
+The system does NOT include:
+
+- Replacement of physical security procedures (e.g., identity checks at gates)
+- Integration with external government databases
+- Advanced automation or AI-based decision systems
+
 # Technologies Used
 
 - HTML
