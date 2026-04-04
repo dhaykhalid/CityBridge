@@ -12,7 +12,6 @@ CityBridge focuses on improving efficiency, transparency, and coordination in en
 
 Unlike traditional systems, CityBridge offers a flexible and user-friendly experience tailored for smart city environments.
 
-# Main Features
 
 # User Features
 
