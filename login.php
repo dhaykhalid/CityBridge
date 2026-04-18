@@ -1,3 +1,44 @@
+<?php
+session_start();
+include "db.php";
+
+$error = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST["email"]);
+    $userPassword = trim($_POST["password"]);
+
+    $sql = "SELECT * FROM account WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+
+        if (password_verify($userPassword, $row["password_hash"])) {
+            $_SESSION["account_id"] = $row["account_id"];
+            $_SESSION["role"] = $row["role"];
+            $_SESSION["email"] = $row["email"];
+            $_SESSION["username"] = $row["username"];
+
+            if ($row["role"] === "admin") {
+                header("Location: admin.php");
+                exit();
+            } else {
+                header("Location: user.php");
+                exit();
+            }
+        } else {
+            $error = "Incorrect password.";
+        }
+    } else {
+        $error = "No account found with this email.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +60,7 @@
   </header>
 
   <nav class="breadcrumb">
-    <a href="Home.html">Home</a>
+    <a href="Home.php">Home</a>
     <span class="sep">›</span>
     <span class="current">Login</span>
   </nav>
@@ -29,28 +70,30 @@
       <h2>Welcome Back</h2>
       <p class="subtitle">Log in to your CityBridge account</p>
 
-      <form id="loginForm" action="user.html" method="post" novalidate>
+      <?php if (!empty($error)) { ?>
+        <p style="color:red; text-align:center; margin-bottom:15px;"><?php echo $error; ?></p>
+      <?php } ?>
+
+      <form id="loginForm" action="" method="post" novalidate>
 
         <div class="field">
           <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="name@example.com" />
+          <input type="email" id="email" name="email" placeholder="name@example.com" required />
         </div>
 
         <div class="field">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" />
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
         </div>
 
         <div class="login-buttons">
-          <button type="submit" class="btn btn-primary btn-full" formaction="user.html">Login as User</button>
-          <div class="divider"><span>or</span></div>
-          <button type="submit" class="btn btn-admin btn-full" formaction="admin.html">Login as Admin</button>
+          <button type="submit" class="btn btn-primary btn-full">Login</button>
         </div>
 
       </form>
 
       <div class="form-footer">
-        Don't have an account? <a href="signup.html">Sign Up</a>
+        Don't have an account? <a href="signup.php">Sign Up</a>
       </div>
     </div>
   </main>
@@ -68,7 +111,7 @@
           <path d="M19.6 2.3h2.4l-5.2 6 6.1 8h-4.8l-3.6-4.8-4.1 4.8H3.8l5.6-6.4L3.6 2.3H8l3.2 4.4z"/>
         </svg>
       </a>
-      <a href="/cdn-cgi/l/email-protection#0c6f6578756e7e65686b694c69616d6560226f6361" aria-label="Email">
+      <a href="#" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
           <path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5"/>
         </svg>
@@ -80,6 +123,5 @@
       </a>
     </div>
   </footer>
-<script src="script.js"></script>
 </body>
 </html>
